@@ -8,5 +8,9 @@ int main(){
 
 	printf("%p %p\n",p,&s[3]);	
 
+	char ss[10] = "aaa";
+	char *pp = mon_strcat(ss,t);
+	printf("%s\n",pp);
+
 	return 0;
 }
