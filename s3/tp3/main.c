@@ -2,10 +2,11 @@
 #include "tp3.h"
 
 int main(){
-	char s[] = "ajr";
-	char t[] = "bjr";
-	int tmp = mon_strncmp(s,t);
-	printf("%d\n", tmp);
+	char *s = "chehat";
+	char *t = "hat";
+	char *p = mon_strstr(s,t);
+
+	printf("%p %p\n",p,&s[3]);	
 
 	return 0;
 }
