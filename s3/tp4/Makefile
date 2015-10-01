@@ -1,15 +1,18 @@
-.PHONY : clean
-
+.PHONY: clean
+SRC=$(wildcard *.c)
+JOBS= $(SRC:.c = .o)
 CC = gcc
-W = -W -Wall -Werror
-STD = -std=c99
-E = tp4
+CFLAG = -Wall -W -Werror 
 
-$(E) : main.o $(E)_1.o $(E)_2.o 
+all: prog
+
+makefile.dep: $(SRC)
+	$(CC) -MM $(CFLAG) *.c $^ > $@
+
+prog: $(JOBS)
 	$(CC) -o $@ $^
 
-%.o : %.c
-	$(CC) $(W) $(STD) -c $^
+include makefile.dep
 
 clean:
-	rm -rf *.o
+	rm -f *.o
