@@ -13,5 +13,7 @@ char * saisie (){
         c = getchar();
         p[i++] = c;
     }while(!isspace(c));
+    p=realloc(p,(i+64)*sizeof(char));
+    p[i]='\0';
     return p;
 }

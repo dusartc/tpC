@@ -16,15 +16,15 @@ int main(int argc, char **argv){
 	if(strstr(argv[1],"s") != NULL){
 		if(strstr(argv[1],"m") != NULL){
 			char * a = saisie();
-      char * b = miroir(a);
+			char * b = miroir(a);
 			printf("%s\n",b);
-      free(a);
-      free(b);
+			free(a);
+			free(b);
 			return 0;
 		}
 		char * a = saisie();
 		printf("%s",a);
-    free(a);
+		free(a);
 		return 0;
 	}
 	if(strstr(argv[1],"m") != NULL){
@@ -32,18 +32,18 @@ int main(int argc, char **argv){
 			printf("mauvaise utilisation\n");
 			return 1;
 		}
-    char * t = miroir(argv[2]);
+		char * t = miroir(argv[2]);
 		printf("%s\n",t);
-    free(t);
+		free(t);
 		return 0;
 	}
-
+  return -1;
 }
 
 /*
  *int main(int argc, char **argv){
- *  while(1)
- *    main2(argc,argv);
- *  return 0;
+ *	while(1)
+ *		main2(argc,argv);
+ *	return 0;
  *}
  */

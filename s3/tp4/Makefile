@@ -1,16 +1,16 @@
 .PHONY: clean
 SRC=$(wildcard *.c)
-JOBS= $(SRC:.c = .o)
-CC = gcc
-CFLAG = -Wall -W -Werror 
+JOBS=$(SRC:.c=.o)
+CC=gcc
+CFLAGS=-Wall -W -Werror 
 
 all: prog
 
 makefile.dep: $(SRC)
-	$(CC) -MM $(CFLAG) *.c $^ > $@
+	$(CC) -MM $(CFLAGS) -std=c99 *.c $^ > $@
 
 prog: $(JOBS)
-	$(CC) -o $@ $^
+	$(CC) --std=c99 -o $@ $^
 
 include makefile.dep
 
