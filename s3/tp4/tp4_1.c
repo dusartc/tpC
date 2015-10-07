@@ -1,12 +1,14 @@
 #include <stdlib.h>
+#include <string.h>
 
 char * miroir (const char *s){
-	int len;
-	for(int i=0;s[i]!='\0';i++)
-		len=i;
+  int len = strlen(s)+1;
 	char * ans = malloc(sizeof(char)*len);
-	for(int i=0;i<=len;i++){
-		ans[i] = s[len-i];
+  int i;
+	for(i=0;i<len-1;i++){
+		ans[i] = s[len-i-1];
 	}	
+  ans[i]='\0';
 	return ans;
 }
+

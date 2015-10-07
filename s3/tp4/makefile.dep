@@ -1,0 +1,6 @@
+main.o: main.c tp4.h
+tp4_1.o: tp4_1.c
+tp4_2.o: tp4_2.c
+tp4_2.o: tp4_2.c
+main.o: main.c tp4.h
+tp4_1.o: tp4_1.c
