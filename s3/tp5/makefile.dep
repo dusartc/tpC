@@ -1,0 +1,4 @@
+main.o: main.c tp5.h
+tp5_1.o: tp5_1.c tp5.h
+main.o: main.c tp5.h
+tp5_1.o: tp5_1.c tp5.h
