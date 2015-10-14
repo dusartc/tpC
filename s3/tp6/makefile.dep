@@ -1,0 +1,6 @@
+main.o: main.c tp6.h
+tp6_1.o: tp6_1.c tp6.h
+tp6_2.o: tp6_2.c
+tp6_2.o: tp6_2.c
+main.o: main.c tp6.h
+tp6_1.o: tp6_1.c tp6.h
