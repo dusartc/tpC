@@ -34,3 +34,9 @@ int lire_entete(int de, entete_bmp *entete);
 int ecrire_deux_octets(int fd, uint16 val);
 int ecrire_quatre_octets(int fd, uint32 val);
 int ecrire_entete(int vers, entete_bmp *entete);
+
+int verifier_entete(entete_bmp *entete);
+
+int lire_pixels(int de, entete_bmp *entete, unsigned char *pixels);
+
+int ecrire_pixels(int vers, entete_bmp *entete, unsigned char *pixels);
