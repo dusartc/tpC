@@ -36,7 +36,7 @@ int main(int argc, char **argv){
       return 1;
     }
     if(argc == 1){
-      f=1;
+      f=0;
     }
     traiter(f,car,mot,lig);
     printf("    %s :\n",argv[idx]);

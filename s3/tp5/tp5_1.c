@@ -14,7 +14,7 @@ int traiter(int f, int *car, int *mot, int *lig){
   while((b=read(f,buffer,80))!=0){
     for(i=0;i<b-1;i++){
       if(islower(buffer[i]) || isupper(buffer[i])){
-        while((islower(buffer[i]) || isupper(buffer[i])) && i<(b-2)){
+        while((islower(buffer[i]) || isupper(buffer[i]))){
           i++;
           *car+=1;
         }
