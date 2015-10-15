@@ -10,5 +10,7 @@ int main(){
   lire_entete(t,&bmp);
   printf("%d\n",bmp.bitmap.profondeur);
   printf("%d\n",verifier_entete(&bmp));
+  unsigned char * c = allouer_pixels(&bmp);
+  c++;
   return 0;
 }

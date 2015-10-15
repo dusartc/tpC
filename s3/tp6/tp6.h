@@ -40,3 +40,5 @@ int verifier_entete(entete_bmp *entete);
 int lire_pixels(int de, entete_bmp *entete, unsigned char *pixels);
 
 int ecrire_pixels(int vers, entete_bmp *entete, unsigned char *pixels);
+
+unsigned char* allouer_pixels(entete_bmp *entete);
