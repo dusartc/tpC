@@ -4,9 +4,15 @@ tp6_2.o: tp6_2.c tp6.h
 tp6_3.o: tp6_3.c tp6.h
 tp6_4.o: tp6_4.c tp6.h
 tp6_5.o: tp6_5.c tp6.h
-tp6_2.o: tp6_2.c tp6.h
+tp6_6.o: tp6_6.c tp6.h
+tp6_7.o: tp6_7.c tp6.h
+tp6_8.o: tp6_8.c tp6.h
+tp6_8.o: tp6_8.c tp6.h
+tp6_7.o: tp6_7.c tp6.h
 tp6_3.o: tp6_3.c tp6.h
 tp6_4.o: tp6_4.c tp6.h
 main.o: main.c tp6.h
 tp6_5.o: tp6_5.c tp6.h
+tp6_6.o: tp6_6.c tp6.h
+tp6_2.o: tp6_2.c tp6.h
 tp6_1.o: tp6_1.c tp6.h
