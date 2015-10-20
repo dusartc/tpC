@@ -28,5 +28,5 @@ int traiter(int f, int *car, int *mot, int *lig){
   }
   *car-=1;
   *mot-=1; //end of file
-  return 0;
+  return b==0;
 }
