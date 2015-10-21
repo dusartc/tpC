@@ -8,7 +8,7 @@
 
 int traiter(int f, int *car, int *mot, int *lig){
   *car=0;*mot=0;*lig=0;
-  char *buffer = malloc(sizeof(char)*80);
+  char buffer[80];
   int b;
   int i;
   while((b=read(f,buffer,80))!=0){
@@ -28,6 +28,5 @@ int traiter(int f, int *car, int *mot, int *lig){
   }
   *car-=1;
   *mot-=1; //end of file
-  free(buffer);
-  return 0;
+  return b==0;
 }

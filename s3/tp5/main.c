@@ -8,7 +8,7 @@ int main(int argc, char **argv){
   int c=0;
   int idx=1;
   if(argc>1){
-    for(idx=1;argv[idx][0] == '-';idx++){
+    for(idx=1;argv[idx][0] == '-' && argc>2;idx++){
       if(strstr(argv[idx],"l")){
         l=1;
       }    
