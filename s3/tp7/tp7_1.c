@@ -22,7 +22,7 @@ void parcourir_repertoire(const char *chemin){
       }
     } else {
       //file
-      char *t = malloc(strlen(chemin) + strlen(dirent->d_name +2));
+      char *t = malloc(strlen(chemin) + strlen(dirent->d_name)+2);
       strcpy(t,chemin);
       traiter_fichier(strcat(strcat(t,"/"),dirent->d_name));
       free(t);
