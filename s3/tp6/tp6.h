@@ -48,5 +48,5 @@ int copier_bmp(int de, int vers, char **argv, int argc);
 void rouge(entete_bmp *entete, unsigned char *pixels);
 void negatif(entete_bmp *entete, unsigned char *pixels);
 void noir_et_blanc(entete_bmp *entete, unsigned char *pixels);
-void moitie(entete_bmp *entete, unsigned char *pixels);
+void moitie(entete_bmp *entete, unsigned char *pixels, int sup);
 int t(entete_bmp *entete, unsigned char *pixels, char **argv,int argc, int idx);

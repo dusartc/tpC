@@ -33,12 +33,20 @@ int t(entete_bmp *entete, unsigned char *pixels, char **argv, int argc, int idx)
     rouge(entete,pixels);
     return t(entete,pixels,argv,argc,++idx);
   }
-  else if(strcmp(argv[idx],"-n")){
+  else if(strcmp(argv[idx],"-n")==0){
     negatif(entete,pixels);
     return t(entete,pixels,argv,argc,++idx);
   }
-  else if(strcmp(argv[idx],"-b")){
+  else if(strcmp(argv[idx],"-b")==0){
     noir_et_blanc(entete,pixels);
+    return t(entete,pixels,argv,argc,++idx);
+  }
+  else if(strcmp(argv[idx],"-s")==0){
+    moitie(entete,pixels,1);
+    return t(entete,pixels,argv,argc,++idx);
+  }
+  else if(strcmp(argv[idx],"-i")==0){
+    moitie(entete,pixels,0);
     return t(entete,pixels,argv,argc,++idx);
   }
   return 0;
