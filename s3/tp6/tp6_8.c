@@ -47,17 +47,21 @@ void rouge(entete_bmp *entete, unsigned char *pixels){
 	}
 }
 
+
 void moitie(entete_bmp *entete, unsigned char *pixel, int sup){
 	entete->bitmap.hauteur /= 2;
-	entete->bitmap.taille_donnees_image = entete->bitmap.hauteur*((entete->bitmap.largeur*3) + (4-(entete->bitmap.largeur*3%4)));
-	entete->fichier.taille_fichier -= entete->bitmap.taille_donnees_image;
+	entete->bitmap.taille_donnees_image = entete->bitmap.hauteur*((entete->bitmap.largeur*(entete->bitmap.profondeur/8)) + ((4-((entete->bitmap.largeur*3)&3))&3));
+	entete->fichier.taille_fichier = entete->bitmap.taille_donnees_image + entete->fichier.offset_donnees;
 	int i = 0;
 	if(sup){
 		for(i = 0; i < (int) entete->bitmap.taille_donnees_image; ++i){
 			pixel[i] = pixel[entete->bitmap.taille_donnees_image+i];
 		}
+
 	}
 	else{
 			pixel = pixel;
 	}
+
 }
+

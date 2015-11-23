@@ -1,7 +1,9 @@
 #include "tp6.h"
+#include <sys/types.h>
 #include <unistd.h>
 
 int lire_pixels(int de, entete_bmp *entete, unsigned char *pixels){
-  int s = entete->bitmap.hauteur * entete->bitmap.largeur * (entete->bitmap.profondeur/8);
+  lseek(de, entete->fichier.offset_donnees, SEEK_SET);
+  int s = entete->bitmap.taille_donnees_image;
   return read(de,pixels,s);
 }

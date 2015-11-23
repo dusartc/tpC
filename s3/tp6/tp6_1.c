@@ -1,13 +1,24 @@
 #include "tp6.h"
 #include <stdio.h>
 #include <unistd.h> 
+#include <stdlib.h>
 
 int lire_deux_octets(int fd, uint16 *val){
-  return read(fd, val, 2); 
+  int i = read(fd, val, 2); 
+  if(i!=2){
+    fprintf(stderr,"Erreur de lecture 2 octets %d",i);
+    exit(1);
+  }
+  return i;
 }
 
 int lire_quatre_octets(int fd, uint32 *val){
-  return read(fd, val, 4);
+  int i = read(fd,val,4);
+  if(i!=4){
+    fprintf(stderr,"Erreur de lecture 4 octets");
+    exit(1);
+  }
+  return i;
 }
 
 int lire_entete(int de, entete_bmp *entete){
