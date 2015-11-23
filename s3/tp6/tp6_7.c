@@ -13,7 +13,7 @@ int copier_bmp(int de, int vers, char **argv, int argc){
   pixels = allouer_pixels(&entete);
   lire_pixels(de, &entete, pixels);
 
-  afficher_entete(&entete);
+  //afficher_entete(&entete);
 
   t(&entete,pixels,argv,argc,1);
 
@@ -25,7 +25,7 @@ int copier_bmp(int de, int vers, char **argv, int argc){
 }
 
 int t(entete_bmp *entete, unsigned char *pixels, char **argv, int argc, int idx){
-  printf("%d %d\n",argc,idx);
+  //printf("%d %d\n",argc,idx);
   if(idx>=argc){
     return 0;
   }
