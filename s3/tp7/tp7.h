@@ -23,16 +23,15 @@ typedef struct {
   } operande;
 } expression;
 
-void traiter_fichier(const char *chemin);
-void parcourir_repertoire(const char *chemin);
+void traiter_fichier(const char *chemin, const expression *exp, int suivre_lien);
+//void parcourir_repertoire(const char *chemin);
 
 int nom_correspond(const char *chemin, const char *motif);
-/*
- *int type_correspond(const struct stat *buf, char type);
- *int executable(const struct stat *buf);
- *int vide(const struct stat *buf);
- *int plus_recent(const struct stat *buf, const char *fichier_reference);
- *
- *void type_fichier(const char *chemin, const expression *exp, int suivre_lien);
- *void parcourir_repertoire(const char *chemin, const expression *exp, int suivre_lien);
- */
+int type_correspond(const struct stat *buf, char type);
+int executable(const struct stat *buf);
+int vide(const struct stat *buf);
+int plus_recent(const struct stat *buf, const char *fichier_reference);
+
+void type_fichier(const char *chemin, const expression *exp, int suivre_lien);
+void parcourir_repertoire(const char *chemin, const expression *exp, int suivre_lien);
+

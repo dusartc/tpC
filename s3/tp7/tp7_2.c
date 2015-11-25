@@ -27,7 +27,7 @@ int type_correspond(const struct stat *buf, char type){
     return S_ISFIFO(buf->st_mode);
   if(strcmp(&type,"s")==0)
     return S_ISSOCK(buf->st_mode);
-  return 0;
+  return -1;
 }
 
 int executable(const struct stat *buf){

@@ -1,7 +1,10 @@
 #include "tp7.h"
 
-int main(void){
-   parcourir_repertoire("..");
-   return 0;
+int main(int argc, char **argv){
+  if(argc < 3){
+    fprintf(stderr,"not enough arg");
+    return -1;
+  }
+  return 0;
 }
 
