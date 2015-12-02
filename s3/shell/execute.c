@@ -15,13 +15,14 @@ void execute_ligne_commande(){
   if(*flag == 0){
     //bloquant
     printf("bloquant\n");
-    if(fork() == 0){
+    int f;
+    if((f=fork()) == 0){
       execvp(argv[0],argv);
       perror("exevp");
       exit(1);
     } else {
       int status[1];
-      wait(status);
+      waitpid(f,status,0);
       erreur(status[1]);
     }
   } else if(*flag == 1){
