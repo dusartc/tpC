@@ -1,0 +1,6 @@
+execute.o: execute.c ligne_commande.h shell.h
+main.o: main.c shell.h ligne_commande.h
+prompt.o: prompt.c shell.h ligne_commande.h
+main.o: main.c shell.h ligne_commande.h
+execute.o: execute.c ligne_commande.h shell.h
+prompt.o: prompt.c shell.h ligne_commande.h
